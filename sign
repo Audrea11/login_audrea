@@ -1,0 +1,42 @@
+import React, {Component}  from 'react':
+
+import{
+  StyleSheet,text,view,StatusBar,TouchableOpacity
+} from 'react-native';
+
+import Logo from '../components/Logo';
+import From from '..components/From';
+
+import (action) from 'react-native-router-flux';
+
+export default class signup extend Component<{}>{
+  goBack(){
+    Actions.pop();
+    }
+    render(){
+      return{
+          <View style={Style,container}>
+          <Logo/>    
+          <From type="Signup"/>
+          <View style={style.signupTextCont}>
+          <text style={style.signupText}>Anda berhasil login?</Text>
+          <TouchableOpacity onPress={this.goBack}>
+          <Text style={style.sognupButton}>Sign in</Text></TouchableOpacity>
+          </View></View>
+    }
+  }
+}
+
+const style =StyleSheet.create({
+
+container :
+{backgroundColor:'#455a64',flex;1,alignitems:'center', justifyContent:'center'},
+signuptextCont :
+{flexGrow:1,alignitems:'f;ex-end,justifyContetnt:'center',paddingVertical;16,
+flexDirection:'row'},
+signuptext:
+{}color:'rgba(255,255,255,255,0,6)',fontSize:160,
+signupButton:
+{color:'#ffffff',fontSize:16,fontweight:'500'}
+
+
